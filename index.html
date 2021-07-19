@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<title>Ba simulator</title>
+<script src="js/basim.js"></script>
+<style>
+table, th, td {
+border: 1px solid black;
+border-collapse: collapse;
+}
+th, td {
+padding: 2px 4px;
+}
+th:last-child {
+width: 8em;
+}
+td {
+text-align: center;
+}
+.basimcanvas{
+position: absolute;
+}
+
+</style>
+<center>
+Map: <select id="waveselect">
+<option value="0">Empty 64x48</option>
+<option value="11">Empty 32x32</option>
+<option value="12">Empty 16x16</option>
+<option value="13">Empty 10x10</option>
+<option value="14">Empty 9x9</option>
+<option value="15">Empty 8x8</option>
+<option value="16">Empty 5x5</option>
+<option value="1">Wave 1</option>
+<option value="2">Wave 2</option>
+<option value="3">Wave 3</option>
+<option value="4">Wave 4</option>
+<option value="5">Wave 5</option>
+<option value="6">Wave 6</option>
+<option value="7">Wave 7</option>
+<option value="8">Wave 8</option>
+<option value="9">Wave 9</option>
+<option value="10">Wave 10</option>
+</select><br><br>
+<button id="wavestart"></button>
+<button id="wavepause" style="display: none;"></button>
+<button id="wavestep" style="display: none;">Step</button>
+Tick count: <span id="tickcount"></span><br><br>
+<canvas id="basimcanvas"></canvas><br>
+
+<table id="runnertable" style="display: none;">
+    <!--<thead>
+        <tr>
+            <th>Runner</th>
+            <th>Tick</th>
+            <th>State</th>
+            <th>Position</th>
+            <th>Destination</th>
+            <th>Target</th>
+            <th>Chat</th>
+        </tr>
+    </thead>-->
+</table>
+
+<b>space</b> starts or stops the sim.<br>
+<b>left-click</b> moves the player.<br>
+<b>right-click</b> places/teleports the player.<br>
+<b>f</b> place a game object.<br>
+<b>i</b> place north wall<br>
+<b>l</b> place east wall<br>
+<b>k</b> place south wall<br>
+<b>j</b> place west wall<br>
+<br>
+<b>r</b> drops a right food.<br>
+<b>w</b> drops a wrong food.<br>
+<b>e</b> picks up a food.<br>
+<b>t</b> repairs trap.<br>
+Runner movements: <input id="runnermovements" type="text"/><br>
+Lure distance: <select id="deflevelselect">
+<option value="4">4 tiles (Level 1)</option>
+<option value="5" selected>5 tiles (Level 2-5)</option>
+<option value="6">6 tiles</option>
+<option value="7">7 tiles</option>
+<option value="8">8 tiles</option>
+</select><br><br><br><br>
+<a href="https://github.com/henke96/BaSim">Edited tool; original tool was made by henke96.</a><br>
+<a href="https://github.com/GeChallengeM/GeChallengeM.github.io/blob/master/customLOS.html">Also inspired from modifications made by GeChallengeM</a>
+<center>
